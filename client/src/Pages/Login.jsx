@@ -40,7 +40,7 @@ const Login = () => {
         }
         else {
 
-            const API_ENDPoint = "http://localhost:3000/user/login"
+            const API_ENDPoint = "https://notes-app-backend-five.vercel.app/user/login"
 
             const LoginUser = async () => {
                 try {
