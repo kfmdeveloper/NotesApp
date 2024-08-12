@@ -80,7 +80,7 @@ const Home = () => {
 
         try {
 
-            const res = await axios.post("http://localhost:3000/notes/create", { title }, { withCredentials: true })
+            const res = await axios.post("https://notes-app-backend-five.vercel.app/notes/create", { title }, { withCredentials: true })
             if (res.data && res.data.Notes) {
                 setnotes((prev) => [...prev, res.data.Notes]);
 
@@ -112,7 +112,7 @@ const Home = () => {
     const DeleteNotehandler = async () => {
 
         try {
-            const res = await axios.delete(`http://localhost:3000/notes/delete/${deleteId}`, {
+            const res = await axios.delete(`https://notes-app-backend-five.vercel.app/notes/delete/${deleteId}`, {
                 withCredentials: true
             })
             setnotes(prevNotes => prevNotes.filter(note => note._id !== deleteId));
@@ -138,7 +138,7 @@ const Home = () => {
     const UpdateNote = async (title) => {
 
         try {
-            const res = await axios.put(`http://localhost:3000/notes/update/${Id}`, { title }, { withCredentials: true })
+            const res = await axios.put(`https://notes-app-backend-five.vercel.app/notes/update/${Id}`, { title }, { withCredentials: true })
             setnotes(prevNotes =>
                 prevNotes.map(note =>
                     note._id === Id ? res.data.UpdateNotes : note
