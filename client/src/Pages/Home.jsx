@@ -51,7 +51,7 @@ const Home = () => {
     useEffect(() => {
         const getNotes = async () => {
             try {
-                const res = await axios.get("http://localhost:3000/notes/getnotes", {
+                const res = await axios.get("https://notes-app-backend-five.vercel.app/notes/getnotes", {
                     withCredentials: true
                 })
                 setnotes(res.data.Notes)
