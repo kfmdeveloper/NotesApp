@@ -51,7 +51,7 @@ const Register = () => {
         else {
 
             const RegisterUser = async () => {
-                const API_ENDPoint = "http://localhost:3000/user/register"
+                const API_ENDPoint = "https://notes-app-backend-five.vercel.app/user/register"
                 try {
                     const res = await axios.post(API_ENDPoint, user,
                         {
